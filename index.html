@@ -1,1 +1,22 @@
-<script>window.open('https://animerulz.to/', '_self')</script>
+<script>
+    const url = window.location.href;
+
+    console.log(url);
+
+    let newUrl;
+    if(url.indexOf('animerulz.pro') != -1){
+        newUrl = url.replace('animerulz.pro', 'animerulz.to');
+    }else{
+        newUrl = url.replace('animerulz.in', 'animerulz.to');
+    }
+    let localData;
+    if(!localStorage.getItem('isMigrated')){
+        localData = JSON.stringify(localStorage);
+        localStorage.setItem('isMigrated', true)
+        window.open(newUrl + `?ls=${localData}`, '_self');
+    }else{
+        window.open(newUrl, '_self');
+    }
+
+
+</script>
