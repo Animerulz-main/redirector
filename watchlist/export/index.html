@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Export Watch List Data</title>
+</head>
+<body>
+    <script>
+        try{
+            const localWatchListData = JSON.stringify(localStorage.watchList);
+            
+            console.log(`https://animerulz.to/watchlist/?data=${localWatchListData}`);
+            console.log(localWatchListData);
+            // window.open(`https://animerulz.to/watchlist/?data=${localWatchListData}`);
+        }catch{
+            window.open(`https://animerulz.to/watchlist/?nodata=true`);
+        }
+    </script>
+</body>
+</html>
