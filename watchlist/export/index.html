@@ -7,14 +7,13 @@
 </head>
 <body>
     <script>
+
         try{
             const localWatchListData = JSON.stringify(localStorage.watchList);
             
-            console.log(`https://animerulz.to/watchlist/?data=${localWatchListData}`);
-            console.log(localWatchListData);
-            // window.open(`https://animerulz.to/watchlist/?data=${localWatchListData}`);
+            window.open(`https://animerulz.to//watchlist/?data=${localWatchListData}`, '_self');
         }catch{
-            window.open(`https://animerulz.to/watchlist/?nodata=true`);
+            window.open(`https://animerulz.to//watchlist/?nodata=true`, '_self');
         }
     </script>
 </body>
